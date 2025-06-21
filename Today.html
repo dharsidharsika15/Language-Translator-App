@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator App</title>
+    <style>
+      .div{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+      }
+      input{
+        width: 250px;
+      }
+      button{
+        width: 100px;
+      }
+    </style>
+
+</head>
+<body>
+    <div>
+        <form class="div">
+            <h1>Login Form</h1>
+            <label for="">Name</label>
+            <input type="text" placeholder="Enter your Name">
+            <label for="">Number</label>
+            <input type="number" placeholder="Enter your Number">
+            <label for="">Email</label>
+            <input type="email" placeholder="Enter your Email">
+            <button><b>Submit</b></button>
+        </form>
+    </div>
+
+    <div id="translator"> </div>
+
+    <!-- cloud file convert into JS file -->
+    <script src="https:translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"> </script> 
+
+    <script>
+        function googleTranslateElementInit(){
+            new google.translate.TranslateElement({pagelanguage:'en'},'translator');
+        }
+    </script>
+
+</body>
+</html>
